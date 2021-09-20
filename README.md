@@ -1,0 +1,1 @@
+# adamsokolski.pl
