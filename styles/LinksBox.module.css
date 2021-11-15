@@ -1,0 +1,19 @@
+.links {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 40px;
+  padding: 20px;
+}
+.links::after {
+  content: "";
+  background-color: white;
+  height: 80px;
+  width: 1px;
+}
+
+.link {
+  padding: 5px;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,900&family=Zilla+Slab&display=swap");
 
 :root {
   --color-2: rgba(132, 94, 194, 1);
@@ -23,8 +23,15 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #333;
   color: white;
+  height: 100%;
+  width: 100%;
+  background: #333;
+  background: radial-gradient(
+    circle,
+    rgba(51, 51, 51, 1) 70%,
+    rgb(27, 27, 27) 100%
+  );
 }
 
 a {
@@ -50,17 +57,21 @@ a {
   }
 }
 
+#__next {
+  height: 100vh;
+}
+
 /* Header */
 
 header {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 20px;
+  min-height: 10%;
 }
 
-header .logo-link {
+header .logo {
   margin-right: auto;
 }
 
@@ -72,3 +83,41 @@ header a {
 header a span {
   color: var(--color-4);
 }
+
+/* Main */
+
+main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 85%;
+  max-width: 900px;
+  margin: auto;
+}
+
+main h2 {
+  font-size: 4rem;
+}
+
+main h3 {
+  font-size: 2.5rem;
+}
+main p {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 0;
+  width: 100%;
+  min-height: 5%;
+}
+
+/* Buttons */

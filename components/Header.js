@@ -1,30 +1,26 @@
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
     <header>
-      <Link href="/">
-        <a className="logo-link">
-          <h1 className={styles.headerLogo}>as</h1>
-        </a>
-      </Link>
-      <Link href="/">
+      <Logo />
+      <Link href="/about">
         <a>
-          <span>01.</span> Home
+          <span>01.</span> About
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/resume">
         <a>
           <span>02.</span> Resume
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/projects">
         <a>
           <span>03.</span> Projects
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/contact">
         <a>
           <span>04.</span> Contact
         </a>
