@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "./Logo";
-import Toggle from "./Toggle";
 
 const Header = () => {
   return (
@@ -27,7 +26,6 @@ const Header = () => {
           <span>04.</span> Contact
         </a>
       </Link>
-      <Toggle />
     </header>
   );
 };
