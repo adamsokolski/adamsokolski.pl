@@ -6,7 +6,12 @@
 }
 
 .notification {
-  background-color: rgba(255, 150, 113, 1);
+  background: radial-gradient(
+    circle,
+    rgba(255, 111, 145, 1) 50%,
+    rgba(255, 150, 113, 1) 75%
+  );
+  background-size: 200% auto;
   border-radius: 8px;
   padding: 1rem;
   display: flex;
@@ -14,4 +19,24 @@
   align-items: center;
   font-size: 1.5rem;
   margin: 1rem;
+  box-shadow: var(--shadow-elevation-medium);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.notification:hover {
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.close {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.close:hover {
+  transform: scale(1.3);
 }

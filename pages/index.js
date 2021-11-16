@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <h1 className={styles.name}>Adam Sokólski</h1>
       <h2 className={styles.prof}>Front-End Developer</h2>
-      <button>
+      <button className={styles.about}>
         <Link href="/about">
           <a>About Me</a>
         </Link>

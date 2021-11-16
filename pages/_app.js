@@ -1,6 +1,8 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
 import "../styles/button.css";
+import "../styles/shadows.css";
+
 import { AnimateSharedLayout } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {

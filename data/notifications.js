@@ -6,7 +6,7 @@ const notifications = [
   },
   {
     id: 2,
-    text: "Bruh 😌",
+    text: "check it, ok? 🤨",
     link: "",
   },
 ];
