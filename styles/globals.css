@@ -59,6 +59,12 @@ a {
   }
 }
 
+@media (max-width: 900px) {
+  main {
+    padding: 2rem;
+  }
+}
+
 #__next {
   height: 100vh;
 }

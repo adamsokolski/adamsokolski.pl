@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 const Layout = ({ children }) => {
   const router = useRouter();
   const location = router.pathname;
-  console.log(location);
   const mainVariants = {
     initial: {
       opacity: 0,
@@ -29,10 +28,17 @@ const Layout = ({ children }) => {
     },
   };
 
+  const capitalizeFirstLetter = (string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
+
   return (
     <>
       <Head>
-        <title>Adam Sokólski | {location.substring(1)}</title>
+        <title>
+          Adam Sokólski{" "}
+          {location.substring(1) &&
+            `| ${capitalizeFirstLetter(location.substring(1))}`}
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
