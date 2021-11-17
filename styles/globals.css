@@ -19,6 +19,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   color: white;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: #333;
   background: radial-gradient(
     circle,

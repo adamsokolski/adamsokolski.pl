@@ -3,8 +3,26 @@ import Link from "next/link";
 import Logo from "./Logo";
 
 const Header = () => {
+  const startVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        duration: 0.6,
+        transition: { when: "beforeChildren" },
+      },
+    },
+  };
   return (
-    <header>
+    <motion.header
+      variants={startVariants}
+      animate="animate"
+      initial="initial"
+      exitBeforeEnter
+    >
       <Logo />
       <Link href="/about">
         <a>
@@ -26,7 +44,7 @@ const Header = () => {
           <span>04.</span> Contact
         </a>
       </Link>
-    </header>
+    </motion.header>
   );
 };
 
