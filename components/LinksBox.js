@@ -15,7 +15,7 @@ const LinksBox = () => {
           <GitHub strokeWidth="1.5px" />
         </a>
       </Link>
-      <Link href="">
+      <Link href="/">
         <a className={styles.link}>
           <Mail strokeWidth="1.5px" />
         </a>
