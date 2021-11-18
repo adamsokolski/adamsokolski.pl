@@ -19,15 +19,12 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
   background: #333;
   background: radial-gradient(
     circle,
@@ -65,10 +62,6 @@ a {
   }
 }
 
-#__next {
-  height: 100vh;
-}
-
 /* Header */
 
 header {
@@ -99,8 +92,8 @@ main {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  height: 85%;
-  max-width: 900px;
+  min-height: 80vh;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -131,7 +124,7 @@ main p {
 /* Footer */
 
 footer {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,28 +189,53 @@ textarea:focus {
 
 /* Projects */
 
-.project {
+.project-box {
   margin: 5rem 0;
   padding: 1rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgb(185, 119, 95) 0%, #333 80%);
+  background-size: 500% auto;
+}
+
+.project-box:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.project-content {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
-  background-color: rgba(51, 51, 51, 0.109);
-  border-radius: 10px;
+  width: 50%;
 }
 
-.project:nth-child(odd) {
-  align-items: flex-end;
-  padding-left: 5%;
+.odd {
+  align-items: flex-start;
 }
 
-.project:nth-child(even) {
-  padding-right: 5%;
+.project-box img {
+  width: 50%;
 }
+
 .technology {
   display: inline-block;
   padding-right: 1rem;
   font-size: 1.4rem;
+}
+
+@media (max-width: 1000px) {
+  .project-box {
+    flex-direction: column;
+  }
+  .project-box:nth-child(odd) {
+    flex-direction: column;
+  }
+  .project-content {
+    width: 100%;
+    align-items: flex-start;
+  }
 }

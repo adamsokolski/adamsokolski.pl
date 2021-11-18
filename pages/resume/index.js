@@ -1,8 +1,13 @@
+import { ExternalLink } from "react-feather";
+
 const Resume = () => {
   return (
     <div>
       <h2>Resume.</h2>
-      <p>Resume stuff</p>
+
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <ExternalLink />
+      </a>
     </div>
   );
 };

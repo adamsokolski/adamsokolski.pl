@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { X } from "react-feather";
 import notifications from "../data/notifications";
 import styles from "../styles/Notifications.module.css";
@@ -71,7 +72,15 @@ const Notifications = () => {
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             drag
           >
-            {notifications[notificationNumber].text}
+            <Link href="/projects">
+              <a
+                onClick={() => {
+                  handleClose();
+                }}
+              >
+                {notifications[notificationNumber].text}
+              </a>
+            </Link>
 
             <button
               className={styles.close}
