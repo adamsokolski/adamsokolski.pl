@@ -106,10 +106,22 @@ main {
 
 main h2 {
   font-size: 4rem;
+  background: radial-gradient(
+    circle,
+    rgba(214, 93, 177, 1) 0%,
+    rgba(255, 111, 145, 1) 50%,
+    rgba(255, 150, 113, 1) 75%,
+    rgba(255, 199, 95, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  opacity: 0.6;
 }
 main p {
   font-size: 1.5rem;
@@ -129,4 +141,50 @@ footer {
   min-height: 5%;
 }
 
-/* Buttons */
+/* Contact */
+
+.contact {
+  width: clamp(50%, 700px, 90%);
+}
+
+.contact input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.contact input[type="text"],
+input[type="email"] {
+  width: clamp(calc(100% - 150px), calc(100% - 100px), calc(100% - 30px));
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.contact input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact textarea {
+  width: clamp(calc(100% - 150px), calc(100% - 100px), calc(100% - 30px));
+  height: 7rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.contact label {
+  padding: 10px 0;
+  width: clamp(30px, 100px, 100px);
+}
+
+.contact p {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}

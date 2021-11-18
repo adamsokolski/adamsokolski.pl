@@ -20,10 +20,9 @@ export default function handler(req, res) {
     .send(msg)
     .then(() => {
       console.log("Email sent");
+      res.status(200).json({ name: "ok" });
     })
     .catch((error) => {
       console.error(error);
     });
-
-  res.status(200).json({ name: "ok" });
 }

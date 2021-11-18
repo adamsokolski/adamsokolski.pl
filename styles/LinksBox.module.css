@@ -17,3 +17,12 @@
 .link {
   padding: 5px;
 }
+.contactLink {
+  transform: translateY(3px);
+}
+
+@media (max-width: 1000px) {
+  .links {
+    display: none;
+  }
+}

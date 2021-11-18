@@ -23,21 +23,23 @@ const LinksBox = () => {
       animate="animate"
       initial="initial"
     >
-      <Link href="https://www.linkedin.com/in/adam-sok%C3%B3lski-bb4370199/">
-        <a className={styles.link}>
-          <Linkedin strokeWidth="1.5px" />
-        </a>
-      </Link>
-      <Link href="https://github.com/idKrazu">
-        <a className={styles.link}>
-          <GitHub strokeWidth="1.5px" />
-        </a>
-      </Link>
-      <Link href="/">
-        <a className={styles.link}>
-          <Mail strokeWidth="1.5px" />
-        </a>
-      </Link>
+      <a
+        className={styles.link}
+        href="https://www.linkedin.com/in/adam-sok%C3%B3lski-bb4370199/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin strokeWidth="1.5px" />
+      </a>
+
+      <a
+        className={styles.link}
+        href="https://github.com/idKrazu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHub strokeWidth="1.5px" />
+      </a>
     </motion.div>
   );
 };

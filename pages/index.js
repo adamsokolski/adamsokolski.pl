@@ -16,13 +16,13 @@ export default function Home() {
   };
   return (
     <>
-      <h1 className={styles.name}>Adam Sokólski</h1>
-      <h2 className={styles.prof}>Front-End Developer</h2>
-      <button className={styles.about}>
+      <h2 className={styles.name}>Adam Sokólski</h2>
+      <h3 className={styles.prof}>Front-End Developer</h3>
+      <div className="mainButton">
         <Link href="/about">
           <a>About Me</a>
         </Link>
-      </button>
+      </div>
     </>
   );
 }
