@@ -169,6 +169,11 @@ textarea:focus {
   outline: none;
 }
 
+.contact input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .contact textarea {
   width: clamp(calc(100% - 150px), calc(100% - 100px), calc(100% - 30px));
   height: 7rem;

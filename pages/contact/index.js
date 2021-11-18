@@ -7,6 +7,7 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
   const success = () => {
     confetti({
@@ -18,6 +19,7 @@ const Contact = () => {
 
   async function handleOnSubmit(e) {
     e.preventDefault();
+    setEmailSent(true);
     const data = {};
     Array.from(e.currentTarget.elements).forEach((field) => {
       if (field.name) {
@@ -96,7 +98,12 @@ const Contact = () => {
             }}
           ></textarea>
         </p>
-        <input className="mainButton" type="submit" value="Submit" />
+        <input
+          className="mainButton"
+          type="submit"
+          value="Submit"
+          disabled={emailSent}
+        />
       </form>
     </div>
   );
