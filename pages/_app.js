@@ -30,6 +30,9 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const lang = cookieCutter.get("lang");
     lang == "en" ? setLangPolish(false) : setLangPolish(true);
+    if (!lang) {
+      cookieCutter.set("lang", "pl");
+    }
   }, []);
 
   useEffect(() => {
