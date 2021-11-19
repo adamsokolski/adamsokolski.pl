@@ -56,12 +56,6 @@ a {
   }
 }
 
-@media (max-width: 900px) {
-  main {
-    padding: 2rem;
-  }
-}
-
 /* Header */
 
 header {
@@ -85,6 +79,19 @@ header a span {
   color: var(--color-4);
 }
 
+header .flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2;
+  font-size: 2.5rem;
+  user-select: none;
+  margin: 0 30px;
+}
+header .flag img {
+  border-radius: 50%;
+}
+
 /* Main */
 
 main {
@@ -95,6 +102,7 @@ main {
   min-height: 80vh;
   max-width: 1200px;
   margin: auto;
+  padding: 2rem;
 }
 
 main h2 {

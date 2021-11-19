@@ -3,7 +3,7 @@ import { Linkedin, GitHub } from "react-feather";
 import styles from "../../styles/LinksBox.module.css";
 import confetti from "canvas-confetti";
 
-const Contact = () => {
+const Contact = ({ translationsObj }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -41,7 +41,7 @@ const Contact = () => {
   }
   return (
     <div className="contact">
-      <h2>Contact me.</h2>
+      <h2>{translationsObj.contactTitle}</h2>
       <h3>
         adam.sokolski23@gmail.com{" "}
         <a
@@ -63,7 +63,7 @@ const Contact = () => {
       </h3>
       <form method="post" onSubmit={handleOnSubmit}>
         <p>
-          <label htmlFor="name">name</label>
+          <label htmlFor="name">{translationsObj.contactName}</label>
           <input
             type="text"
             name="name"
@@ -87,7 +87,7 @@ const Contact = () => {
           />
         </p>
         <p>
-          <label htmlFor="message">message</label>
+          <label htmlFor="message">{translationsObj.contactMessage}</label>
           <textarea
             name="message"
             required
@@ -101,7 +101,7 @@ const Contact = () => {
         <input
           className="mainButton"
           type="submit"
-          value="Submit"
+          value={translationsObj.contactSubmit}
           disabled={emailSent}
         />
       </form>

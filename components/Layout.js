@@ -1,12 +1,13 @@
 import Head from "next/head";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 import Footer from "./Footer";
 import Header from "./Header";
 import LinksBox from "./LinksBox";
 import Notifications from "./Notifications";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router";
+import { useState } from "react";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, switchLang, langPolish, translationsObj }) => {
   const router = useRouter();
   const location = router.pathname;
   const mainVariants = {
@@ -44,7 +45,11 @@ const Layout = ({ children }) => {
 
       <Notifications />
       <LinksBox />
-      <Header />
+      <Header
+        switchLang={switchLang}
+        langPolish={langPolish}
+        translationsObj={translationsObj}
+      />
       <AnimatePresence exitBeforeEnter>
         <motion.main
           key={router.pathname}
@@ -57,7 +62,7 @@ const Layout = ({ children }) => {
         </motion.main>
       </AnimatePresence>
 
-      <Footer />
+      <Footer translationsObj={translationsObj} />
     </>
   );
 };

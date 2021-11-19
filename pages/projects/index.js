@@ -2,7 +2,7 @@ import projects from "../../data/projects";
 import { ExternalLink, GitHub } from "react-feather";
 import Image from "next/image";
 
-const Projects = () => {
+const Projects = ({ translationsObj }) => {
   const techStack = (arr) => {
     arr.map((tech) => {
       <div key={tech}>{tech}</div>;
@@ -15,7 +15,7 @@ const Projects = () => {
         className={`project-content` + (project.id % 2 == 0 ? ` even` : ` odd`)}
       >
         <h3>{project.title}</h3>
-        <p>{project.date}</p>
+        <p>{translationsObj.lang == "pl" ? project.datePl : project.dateEn}</p>
         <div className="project-links">
           <a
             href={project.links.github}
@@ -34,7 +34,7 @@ const Projects = () => {
             <ExternalLink strokeWidth="1.5px" />
           </a>
         </div>
-        <p>{project.body}</p>
+        <p>{translationsObj.lang == "pl" ? project.bodyPl : project.bodyEn}</p>
         <div>
           {project.stack.map((tech) => (
             <div className="technology" key={tech}>
@@ -46,7 +46,7 @@ const Projects = () => {
 
       <Image
         src={project.image.src}
-        alt="Picture of the author"
+        alt="Picture of my first project"
         width={600}
         height={337}
       />
@@ -54,7 +54,7 @@ const Projects = () => {
   ));
   return (
     <div className="projects">
-      <h2>My Projects.</h2>
+      <h2>{translationsObj.projectsTitle}</h2>
       {projectsBox}
     </div>
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ translationsObj }) {
   const titleVariants = {
     visible: {
       opacity: 1,
@@ -20,7 +20,7 @@ export default function Home() {
       <h3 className={styles.prof}>Front-End Developer</h3>
       <div className="mainButton">
         <Link href="/about">
-          <a>About Me</a>
+          <a>{translationsObj.aboutButton}</a>
         </Link>
       </div>
     </>

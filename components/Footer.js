@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({ translationsObj }) => {
   const startVariants = {
     initial: {
       opacity: 0,
@@ -19,7 +19,7 @@ const Footer = () => {
       <p>
         © 2021 Adam Sokólski -{" "}
         <Link href="/contact">
-          <a>Contact</a>
+          <a>{translationsObj.contactLink}</a>
         </Link>{" "}
       </p>
     </motion.footer>
