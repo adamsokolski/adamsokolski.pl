@@ -197,7 +197,6 @@ textarea:focus {
   justify-content: center;
   flex-direction: row;
   border-radius: 10px;
-  background: radial-gradient(circle, rgb(185, 119, 95) 0%, #333 80%);
   background-size: 500% auto;
 }
 
