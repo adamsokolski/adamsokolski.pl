@@ -41,7 +41,7 @@ const Projects = ({ translationsObj }) => {
         <p>{translationsObj.lang == "pl" ? project.bodyPl : project.bodyEn}</p>
         <div className="tech-box">
           {project.stack.map((tech) => (
-            <div className="tech-icon" key={project.id + tech.alt}>
+            <div className="tech-icon" key={`${project.id} + ${tech.alt}`}>
               <Image
                 src={tech.src}
                 alt={tech.title + " web technology logo"}
