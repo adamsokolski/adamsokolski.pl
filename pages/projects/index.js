@@ -10,10 +10,11 @@ const Projects = ({ translationsObj }) => {
   };
 
   const projectsBox = projects.map((project) => (
-    <div className="project-box" key={project.id}>
-      <div
-        className={`project-content` + (project.id % 2 == 0 ? ` even` : ` odd`)}
-      >
+    <div
+      className={`project-box` + (project.id % 2 == 0 ? ` even` : ` odd`)}
+      key={project.id}
+    >
+      <div className={`project-content`}>
         <h3 className="project-title">{project.title}</h3>
         <div className="project-links">
           <a
@@ -40,13 +41,12 @@ const Projects = ({ translationsObj }) => {
         <p>{translationsObj.lang == "pl" ? project.bodyPl : project.bodyEn}</p>
         <div className="tech-box">
           {project.stack.map((tech) => (
-            <div className="tech-icon">
+            <div className="tech-icon" key={project.id + tech.alt}>
               <Image
                 src={tech.src}
                 alt={tech.title + " web technology logo"}
                 width={40}
                 height={40}
-                key={project.id + tech.alt}
               />
               <span>{tech.title}</span>
             </div>
@@ -62,6 +62,7 @@ const Projects = ({ translationsObj }) => {
       />
     </div>
   ));
+  projectsBox.reverse();
   return (
     <div>
       <h2>{translationsObj.projectsTitle}</h2>

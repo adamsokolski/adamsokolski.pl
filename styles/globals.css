@@ -197,13 +197,6 @@ textarea:focus {
 
 /* Projects */
 
-.projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column-reverse;
-}
-
 .project-box {
   margin: 5rem 0;
   padding: 1rem;
@@ -215,7 +208,7 @@ textarea:focus {
   background-size: 500% auto;
 }
 
-.project-box:nth-child(odd) {
+.even {
   flex-direction: row-reverse;
 }
 
