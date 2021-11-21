@@ -3,7 +3,7 @@ const About = ({ translationsObj }) => {
     <div>
       <h2>{translationsObj.aboutTitle}</h2>
 
-      <p>{translationsObj.aboutBody}</p>
+      <p className="about-body">{translationsObj.aboutBody}</p>
     </div>
   );
 };

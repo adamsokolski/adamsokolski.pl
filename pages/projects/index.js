@@ -14,10 +14,10 @@ const Projects = ({ translationsObj }) => {
       <div
         className={`project-content` + (project.id % 2 == 0 ? ` even` : ` odd`)}
       >
-        <h3>{project.title}</h3>
-        <p>{translationsObj.lang == "pl" ? project.datePl : project.dateEn}</p>
+        <h3 className="project-title">{project.title}</h3>
         <div className="project-links">
           <a
+            className="project-github-link"
             href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -34,11 +34,21 @@ const Projects = ({ translationsObj }) => {
             <ExternalLink strokeWidth="1.5px" />
           </a>
         </div>
+        <p className="project-date">
+          {translationsObj.lang == "pl" ? project.datePl : project.dateEn}
+        </p>
         <p>{translationsObj.lang == "pl" ? project.bodyPl : project.bodyEn}</p>
-        <div>
+        <div className="tech-box">
           {project.stack.map((tech) => (
-            <div className="technology" key={tech}>
-              {tech}
+            <div className="tech-icon">
+              <Image
+                src={tech.src}
+                alt={tech.title + " web technology logo"}
+                width={40}
+                height={40}
+                key={project.id + tech.alt}
+              />
+              <span>{tech.title}</span>
             </div>
           ))}
         </div>
@@ -53,9 +63,9 @@ const Projects = ({ translationsObj }) => {
     </div>
   ));
   return (
-    <div className="projects">
+    <div>
       <h2>{translationsObj.projectsTitle}</h2>
-      {projectsBox}
+      <div className="projects">{projectsBox}</div>
     </div>
   );
 };

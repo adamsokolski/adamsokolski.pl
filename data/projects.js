@@ -8,7 +8,16 @@ const projects = [
       "A site made for local business, allowing you to easily view the restaurant menu, photos, contact information, and location using Google Maps Embed API. Fully responsive on tablets and phones.",
     dateEn: "October 2021",
     datePl: "Październik 2021",
-    stack: ["React", "HTML", "CSS", "JavaScript"],
+    stack: [
+      { src: "/images/react-icon.png", alt: "React logo", title: "React" },
+      {
+        src: "/images/javascript.png",
+        alt: "JavaScript logo",
+        title: "JavaScript",
+      },
+      { src: "/images/html5.png", alt: "HTML logo", title: "HTML5" },
+      { src: "/images/css3.png", alt: "CSS logo", title: "CSS3" },
+    ],
     image: {
       src: "/project1.png",
     },
