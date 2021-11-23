@@ -17,7 +17,7 @@ export default function Home({ translationsObj }) {
   return (
     <>
       <h2 className={styles.name}>Adam Sokólski</h2>
-      <h3 className={styles.prof}>Front-End Developer</h3>
+      <h3 className="prof">Front-End Developer</h3>
       <div className="mainButton">
         <Link href="/about">
           <a>{translationsObj.aboutButton}</a>
