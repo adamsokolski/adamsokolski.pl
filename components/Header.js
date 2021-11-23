@@ -1,12 +1,33 @@
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import Logo from "./Logo";
-import { useEffect, useState } from "react";
-import cookieCutter from "cookie-cutter";
+import { Menu, X } from "react-feather";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-import Flag from "./Flag";
+import Hamburger from "./Hamburger";
+import Navbar from "./Navbar";
 
 const Header = ({ langPolish, switchLang, translationsObj }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setIsOpen(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   const startVariants = {
     initial: {
       opacity: 0,
@@ -20,52 +41,63 @@ const Header = ({ langPolish, switchLang, translationsObj }) => {
       },
     },
   };
+
+  const hamburgerVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   return (
-    <motion.header
-      variants={startVariants}
-      animate="animate"
-      initial="initial"
-      exitBeforeEnter
-    >
+    <motion.header variants={startVariants} animate="animate" initial="initial">
       <Logo />
 
-      <Link href="/about">
-        <a>
-          <span>01.</span> {translationsObj.aboutLink}
-        </a>
-      </Link>
-      <Link href="/resume">
-        <a>
-          <span>02.</span> {translationsObj.resumeLink}
-        </a>
-      </Link>
-      <Link href="/projects">
-        <a>
-          <span>03.</span> {translationsObj.projectsLink}
-        </a>
-      </Link>
-      <Link href="/contact">
-        <a>
-          <span>04.</span> {translationsObj.contactLink}
-        </a>
-      </Link>
-      <AnimatePresence exitBeforeEnter>
-        {langPolish ? (
-          <Flag
-            flag="pl"
-            key="pl"
-            switchLang={switchLang}
-            langPolish={langPolish}
-          />
-        ) : (
-          <Flag
-            flag="en"
-            key="en"
-            switchLang={switchLang}
-            langPolish={langPolish}
-          />
+      <nav className="hamburger">
+        <AnimatePresence exitBeforeEnter>
+          {isOpen && (
+            <>
+              <motion.div
+                className="navbar-mobile"
+                variants={hamburgerVariants}
+                animate="animate"
+                initial="initial"
+                exit="exit"
+              >
+                <X size="30" onClick={() => handleClick()} />
+                <Navbar
+                  onClick={() => handleClick()}
+                  translationsObj={translationsObj}
+                  langPolish={langPolish}
+                  switchLang={switchLang}
+                />
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+        {!isOpen && (
+          <>
+            <Menu onClick={() => handleClick()} />
+          </>
         )}
-      </AnimatePresence>
+      </nav>
+      <nav className="navbar">
+        <Navbar
+          translationsObj={translationsObj}
+          langPolish={langPolish}
+          switchLang={switchLang}
+        />
+      </nav>
     </motion.header>
   );
 };
