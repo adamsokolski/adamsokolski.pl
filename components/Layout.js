@@ -41,16 +41,17 @@ const Layout = ({ children, switchLang, langPolish, translationsObj }) => {
             `| ${capitalizeFirstLetter(location.substring(1))}`}
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Front-End Developer" />
       </Head>
 
-      <Notifications />
-      <LinksBox />
+      <Notifications translationsObj={translationsObj} />
+      <LinksBox translationsObj={translationsObj} />
       <Header
         switchLang={switchLang}
         langPolish={langPolish}
         translationsObj={translationsObj}
       />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitbeforeenter>
         <motion.main
           key={router.pathname}
           variants={mainVariants}

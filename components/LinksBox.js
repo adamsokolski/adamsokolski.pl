@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Linkedin, GitHub, Mail } from "react-feather";
 import styles from "../styles/LinksBox.module.css";
 
-const LinksBox = () => {
+const LinksBox = ({ translationsObj }) => {
   const startVariants = {
     initial: {
       opacity: 0,
@@ -29,7 +29,8 @@ const LinksBox = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Linkedin strokeWidth="1.5px" />
+        <Linkedin strokeWidth="1.5px" />{" "}
+        <span className="visually-hidden">{translationsObj.linkedinLink}</span>
       </a>
 
       <a
@@ -39,6 +40,7 @@ const LinksBox = () => {
         rel="noopener noreferrer"
       >
         <GitHub strokeWidth="1.5px" />
+        <span className="visually-hidden">{translationsObj.githubLink}</span>
       </a>
     </motion.div>
   );

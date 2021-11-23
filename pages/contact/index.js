@@ -75,6 +75,7 @@ const Contact = ({ translationsObj }) => {
           <label htmlFor="name">{translationsObj.contactName}</label>
           <input
             type="text"
+            id="name"
             name="name"
             value={name}
             onChange={(e) => {
@@ -87,6 +88,7 @@ const Contact = ({ translationsObj }) => {
           <label htmlFor="email">email</label>
           <input
             type="email"
+            id="email"
             name="email"
             required
             value={email}
@@ -99,6 +101,7 @@ const Contact = ({ translationsObj }) => {
           <label htmlFor="message">{translationsObj.contactMessage}</label>
           <textarea
             name="message"
+            id="message"
             required
             minLength={20}
             value={message}

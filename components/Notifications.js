@@ -5,7 +5,7 @@ import { X } from "react-feather";
 import notifications from "../data/notifications";
 import styles from "../styles/Notifications.module.css";
 
-const Notifications = () => {
+const Notifications = ({ translationsObj }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [notificationNumber, setNotificationNumber] = useState(0);
 
@@ -31,7 +31,7 @@ const Notifications = () => {
       x: 0,
       transition: {
         duration: 1,
-        delay: 5,
+        delay: 10,
         type: "spring",
       },
     },
@@ -78,7 +78,7 @@ const Notifications = () => {
                   handleClose();
                 }}
               >
-                {notifications[notificationNumber].text}
+                {translationsObj.firstNotification}
               </a>
             </Link>
 
@@ -89,6 +89,9 @@ const Notifications = () => {
               }}
             >
               <X />
+              <span className="visually-hidden">
+                {translationsObj.closeNotification}
+              </span>
             </button>
           </motion.div>
         )}

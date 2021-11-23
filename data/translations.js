@@ -10,6 +10,8 @@ const translations = {
     projectsLink: "Projects",
     contactLink: "Contact",
     privacyLink: "Cookies",
+    linkedinLink: "Link to my Linkedin",
+    githubLink: "Link to my Github",
     aboutBody:
       "I'm Adam, a 20-year-old Front-end developer from Poland. Currently part-time studying Computer Science at PJAIT.",
     contactName: "name",
@@ -23,6 +25,8 @@ const translations = {
       "Analytical cookies are used to collect anonymous statistics information about the use of the site by users (e.g. number of visitors, links of provenance, key words used to find the site on search engines). They can be sent by the same site (in which case they are combined with technical cookies) or by other sites (third party) that make available functions developed by them. As for example in the case of Google Analytics cookies.",
       "You may consent or not to the installation of cookies even with the use of your computer’s functionality. However, not all the functionality of this site might remain operative should one or more cookies be disabled (some cookies are indispensible for the basic functionality of the site).",
     ],
+    closeNotification: "Close notification",
+    firstNotification: "Check out my newest project! 😎",
   },
   pl: {
     lang: "pl",
@@ -35,6 +39,8 @@ const translations = {
     projectsLink: "Projekty",
     contactLink: "Kontakt",
     privacyLink: "Ciasteczka",
+    linkedinLink: "Link do mojego Linkedin",
+    githubLink: "Link do mojego Github",
     aboutBody:
       "Jestem 20 letnim Front-end developerem. Obecnie studiującym zaocznie informatykę na PJATK.",
     contactName: "imię",
@@ -48,6 +54,8 @@ const translations = {
       "Analityczne pliki cookie służą do zbierania anonimowych informacji statystycznych dotyczących korzystania z witryny przez użytkowników (np. liczba odwiedzających, linki pochodzenia, słowa kluczowe użyte do znalezienia witryny w wyszukiwarkach). Mogą być wysyłane przez tę samą witrynę (w takim przypadku są połączone z technicznymi plikami cookie) lub przez inne witryny (strony trzecie), które udostępniają opracowane przez siebie funkcje. Jak na przykład w przypadku plików cookie Google Analytics.",
       "Możesz wyrazić zgodę lub nie na instalowanie plików cookie nawet przy korzystaniu z funkcji komputera. Jednak nie wszystkie funkcje tej witryny mogą nadal działać, jeśli jeden lub więcej plików cookie zostanie wyłączonych (niektóre pliki cookie są niezbędne do podstawowej funkcjonalności witryny). ",
     ],
+    closeNotification: "Zamknij powiadomienie",
+    firstNotification: "Sprawdź mój najnowszy projekt! 😎",
   },
 };
 
