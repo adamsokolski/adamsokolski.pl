@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Linkedin, GitHub } from "react-feather";
 import styles from "../../styles/LinksBox.module.css";
 import confetti from "canvas-confetti";
+import * as gtag from "../../lib/gtag";
 
 const Contact = ({ translationsObj }) => {
   const [name, setName] = useState("");
@@ -20,6 +21,14 @@ const Contact = ({ translationsObj }) => {
   async function handleOnSubmit(e) {
     e.preventDefault();
     setEmailSent(true);
+
+    gtag.event({
+      action: "submit_form",
+      category: "Contact",
+      label: "message",
+      value: `${name}-${email}:${message}}`,
+    });
+
     const data = {};
     Array.from(e.currentTarget.elements).forEach((field) => {
       if (field.name) {
