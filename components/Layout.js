@@ -51,7 +51,7 @@ const Layout = ({ children, switchLang, langPolish, translationsObj }) => {
         langPolish={langPolish}
         translationsObj={translationsObj}
       />
-      <AnimatePresence exitbeforeenter>
+      <AnimatePresence exitBeforeEnter>
         <motion.main
           key={router.pathname}
           variants={mainVariants}
