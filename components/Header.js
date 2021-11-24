@@ -4,8 +4,6 @@ import { Menu, X } from "react-feather";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-
-import Hamburger from "./Hamburger";
 import Navbar from "./Navbar";
 
 const Header = ({ langPolish, switchLang, translationsObj }) => {
