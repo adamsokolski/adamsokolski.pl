@@ -6,22 +6,22 @@ const Navbar = ({ translationsObj, switchLang, langPolish }) => {
   return (
     <>
       <Link href="/about">
-        <a>
+        <a className="fancy-link">
           <span>01.</span> {translationsObj.aboutLink}
         </a>
       </Link>
       <Link href="/resume">
-        <a>
+        <a className="fancy-link">
           <span>02.</span> {translationsObj.resumeLink}
         </a>
       </Link>
       <Link href="/projects">
-        <a>
+        <a className="fancy-link">
           <span>03.</span> {translationsObj.projectsLink}
         </a>
       </Link>
       <Link href="/contact">
-        <a>
+        <a className="fancy-link">
           <span>04.</span> {translationsObj.contactLink}
         </a>
       </Link>

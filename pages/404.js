@@ -23,7 +23,7 @@ const NotFound = () => {
       <p>
         You&apos;ll be redirected to the{" "}
         <Link href="/">
-          <a>Homepage</a>
+          <a className="fancy-link">Homepage</a>
         </Link>{" "}
         in {redirectTimer} seconds.
       </p>

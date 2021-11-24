@@ -15,10 +15,12 @@ const Projects = ({ translationsObj }) => {
       key={project.id}
     >
       <div className={`project-content`}>
-        <h3 className="project-title">{project.title}</h3>
+        <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+          <h3 className="project-title fancy-link">{project.title}</h3>
+        </a>
         <div className="project-links">
           <a
-            className="project-github-link"
+            className="project-github-link fancy-link"
             href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -27,6 +29,7 @@ const Projects = ({ translationsObj }) => {
             <GitHub strokeWidth="1.5px" />
           </a>
           <a
+            className="fancy-link"
             href={project.links.live}
             target="_blank"
             rel="noopener noreferrer"

@@ -88,6 +88,7 @@ header .flag {
   font-size: 2.5rem;
   user-select: none;
   margin: 0 30px;
+  cursor: pointer;
 }
 header .flag img {
   border-radius: 50%;
@@ -267,6 +268,21 @@ textarea:focus {
   margin: 20px 0;
 }
 
+.contact h3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h3 a {
+  width: min-content;
+  display: flex;
+  align-items: center;
+}
+
+.contact h3 span {
+  margin-left: 5px;
+}
+
 /* Projects */
 
 .project-box {
@@ -396,4 +412,25 @@ textarea:focus {
     50%
   ); /*modern browsers, clip-path works inwards from each corner*/
   white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.fancy-link {
+  background-image: linear-gradient(
+    90deg,
+    rgba(132, 94, 194, 1) 0%,
+    rgba(214, 93, 177, 1) 25%,
+    rgba(255, 111, 145, 1) 50%,
+    rgba(255, 150, 113, 1) 75%,
+    rgba(255, 199, 95, 1) 100%
+  );
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+.fancy-link:hover {
+  background-size: 100% 2px;
 }

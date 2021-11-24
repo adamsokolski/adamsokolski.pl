@@ -19,11 +19,11 @@ const Footer = ({ translationsObj }) => {
       <p>
         © 2021 Adam Sokólski -{" "}
         <Link href="/contact">
-          <a>{translationsObj.contactLink}</a>
+          <a className="fancy-link">{translationsObj.contactLink}</a>
         </Link>
         {" - "}
         <Link href="/privacy">
-          <a>{translationsObj.privacyLink}</a>
+          <a className="fancy-link">{translationsObj.privacyLink}</a>
         </Link>
       </p>
     </motion.footer>

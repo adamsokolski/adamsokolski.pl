@@ -54,20 +54,20 @@ const Contact = ({ translationsObj }) => {
       <h3>
         adam.sokolski23@gmail.com{" "}
         <a
-          className={styles.link}
+          className="fancy-link"
           href="https://www.linkedin.com/in/adam-sok%C3%B3lski-bb4370199/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin strokeWidth="2px" />
+          <Linkedin strokeWidth="2px" size="19" /> <span>Linkedin</span>
         </a>
         <a
-          className={styles.link}
+          className="fancy-link"
           href="https://github.com/idKrazu"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHub strokeWidth="2px" />
+          <GitHub strokeWidth="2px" size="19" /> <span>GitHub</span>
         </a>
       </h3>
       <form method="post" onSubmit={handleOnSubmit}>
