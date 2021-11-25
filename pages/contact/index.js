@@ -63,7 +63,7 @@ const Contact = ({ translationsObj }) => {
         </a>
         <a
           className="fancy-link"
-          href="https://github.com/idKrazu"
+          href="https://github.com/adamsokolski"
           target="_blank"
           rel="noopener noreferrer"
         >

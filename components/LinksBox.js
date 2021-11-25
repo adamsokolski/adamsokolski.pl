@@ -35,7 +35,7 @@ const LinksBox = ({ translationsObj }) => {
 
       <a
         className={styles.link}
-        href="https://github.com/idKrazu"
+        href="https://github.com/adamsokolski"
         target="_blank"
         rel="noopener noreferrer"
       >

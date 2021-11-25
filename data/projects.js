@@ -22,7 +22,7 @@ const projects = [
       src: "/project1.png",
     },
     links: {
-      github: "https://github.com/idKrazu/kebab-pod-kauflandem",
+      github: "https://github.com/adamsokolski/kebab-pod-kauflandem",
       live: "https://kebabpodkauflandem.netlify.app/",
     },
   },
