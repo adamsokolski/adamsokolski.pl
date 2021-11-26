@@ -1,4 +1,4 @@
-import { ExternalLink } from "react-feather";
+// import { ExternalLink } from "react-feather";
 
 const Resume = ({ translationsObj }) => {
   return (
@@ -6,7 +6,7 @@ const Resume = ({ translationsObj }) => {
       <h2>{translationsObj.resumeTitle}</h2>
 
       <a href="" target="_blank" rel="noopener noreferrer">
-        <ExternalLink />
+        {/* <ExternalLink /> */}
       </a>
     </div>
   );
