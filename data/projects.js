@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    title: "Kebab Pod Kauflandem",
+    title: "Kebab Menu Site",
     bodyPl:
       "Strona wykonana dla lokalnego biznesu, pozwalająca na łatwe przejrzenie menu restauracji, zdjęć, informacji kontaktowych oraz lokalizacji przy użyciu Google Maps Embed API. W pełni responsywna na tabletach oraz telefonach.",
     bodyEn:
@@ -22,8 +22,8 @@ const projects = [
       src: "/project1.png",
     },
     links: {
-      github: "https://github.com/adamsokolski/kebab-pod-kauflandem",
-      live: "https://kebabpodkauflandem.netlify.app/",
+      github: "https://github.com/adamsokolski/kebab-site",
+      live: "https://kebab.netlify.app/",
     },
   },
 ];
