@@ -10,19 +10,19 @@ const Navbar = ({ translationsObj, switchLang, langPolish }) => {
           <span>01.</span> {translationsObj.aboutLink}
         </a>
       </Link>
-      <Link href="/resume">
+      {/* <Link href="/resume">
         <a className="fancy-link">
           <span>02.</span> {translationsObj.resumeLink}
         </a>
-      </Link>
+      </Link> */}
       <Link href="/projects">
         <a className="fancy-link">
-          <span>03.</span> {translationsObj.projectsLink}
+          <span>02.</span> {translationsObj.projectsLink}
         </a>
       </Link>
       <Link href="/contact">
         <a className="fancy-link">
-          <span>04.</span> {translationsObj.contactLink}
+          <span>03.</span> {translationsObj.contactLink}
         </a>
       </Link>
       <AnimatePresence exitBeforeEnter>
