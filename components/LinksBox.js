@@ -11,7 +11,7 @@ const LinksBox = ({ translationsObj }) => {
     animate: {
       opacity: 1,
       transition: {
-        delay: 1.5,
+        delay: 2.5,
         duration: 0.6,
       },
     },

@@ -54,6 +54,7 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   height: 40px;
+  width: fit-content;
   padding: 0 10px;
   cursor: pointer;
   display: flex;

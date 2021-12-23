@@ -33,7 +33,7 @@ const Header = ({ langPolish, switchLang, translationsObj }) => {
     animate: {
       opacity: 1,
       transition: {
-        delay: 0.5,
+        delay: 1.5,
         duration: 0.6,
         transition: { when: "beforeChildren" },
       },

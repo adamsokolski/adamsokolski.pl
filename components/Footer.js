@@ -9,7 +9,7 @@ const Footer = ({ translationsObj }) => {
     animate: {
       opacity: 1,
       transition: {
-        delay: 1,
+        delay: 2,
         duration: 0.6,
       },
     },
