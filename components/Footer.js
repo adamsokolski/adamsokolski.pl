@@ -17,7 +17,7 @@ const Footer = ({ translationsObj }) => {
   return (
     <motion.footer variants={startVariants} animate="animate" initial="initial">
       <p>
-        © 2021 Adam Sokólski -{" "}
+        © 2022 Adam Sokólski -{" "}
         <Link href="/contact">
           <a className="fancy-link">{translationsObj.contactLink}</a>
         </Link>

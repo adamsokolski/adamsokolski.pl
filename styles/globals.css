@@ -77,7 +77,15 @@ header a {
 }
 
 header a span {
-  color: var(--color-4);
+  background: radial-gradient(
+    circle,
+    rgba(255, 150, 113, 1) 0%,
+    rgba(255, 199, 95, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header .flag {
@@ -322,6 +330,7 @@ textarea:focus {
   width: 100%;
   padding: 0;
   margin: 4px 0;
+  opacity: 0.7;
 }
 
 .project-github-link {
@@ -417,11 +426,11 @@ textarea:focus {
 .fancy-link {
   background-image: linear-gradient(
     90deg,
-    rgba(132, 94, 194, 1) 0%,
-    rgba(214, 93, 177, 1) 25%,
-    rgba(255, 111, 145, 1) 50%,
+    rgba(255, 199, 95, 1) 0%,
+    rgba(255, 199, 95, 1) 25%,
+    rgba(255, 199, 95, 1) 50%,
     rgba(255, 150, 113, 1) 75%,
-    rgba(255, 199, 95, 1) 100%
+    rgba(255, 150, 113, 1) 100%
   );
   background-size: 0% 2px;
   background-repeat: no-repeat;
