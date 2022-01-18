@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { Linkedin, GitHub, Mail } from "react-feather";
-import styles from "../styles/LinksBox.module.css";
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Linkedin, GitHub, Mail } from 'react-feather'
+import styles from '../styles/LinksBox.module.css'
 
 const LinksBox = ({ translationsObj }) => {
   const startVariants = {
@@ -15,7 +15,7 @@ const LinksBox = ({ translationsObj }) => {
         duration: 0.6,
       },
     },
-  };
+  }
   return (
     <motion.div
       className={styles.links}
@@ -25,11 +25,11 @@ const LinksBox = ({ translationsObj }) => {
     >
       <a
         className={styles.link}
-        href="https://www.linkedin.com/in/adam-sok%C3%B3lski-bb4370199/"
+        href="https://www.linkedin.com/in/adamsokolski/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Linkedin strokeWidth="1.5px" />{" "}
+        <Linkedin strokeWidth="1.5px" />{' '}
         <span className="visually-hidden">{translationsObj.linkedinLink}</span>
       </a>
 
@@ -43,7 +43,7 @@ const LinksBox = ({ translationsObj }) => {
         <span className="visually-hidden">{translationsObj.githubLink}</span>
       </a>
     </motion.div>
-  );
-};
+  )
+}
 
-export default LinksBox;
+export default LinksBox

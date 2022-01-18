@@ -1,61 +1,61 @@
-import { useEffect, useState } from "react";
-import { Linkedin, GitHub } from "react-feather";
-import styles from "../../styles/LinksBox.module.css";
-import confetti from "canvas-confetti";
-import * as gtag from "../../lib/gtag";
+import { useEffect, useState } from 'react'
+import { Linkedin, GitHub } from 'react-feather'
+import styles from '../../styles/LinksBox.module.css'
+import confetti from 'canvas-confetti'
+import * as gtag from '../../lib/gtag'
 
 const Contact = ({ translationsObj }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [emailSent, setEmailSent] = useState(false);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [emailSent, setEmailSent] = useState(false)
 
   const success = () => {
     confetti({
       particleCount: 150,
       spread: 180,
       origin: { x: 0 },
-    });
-  };
+    })
+  }
 
   async function handleOnSubmit(e) {
-    e.preventDefault();
-    setEmailSent(true);
+    e.preventDefault()
+    setEmailSent(true)
 
     gtag.event({
-      action: "submit_form",
-      category: "Contact",
-      label: "message",
+      action: 'submit_form',
+      category: 'Contact',
+      label: 'message',
       value: `${name}-${email}:${message}}`,
-    });
+    })
 
-    const data = {};
+    const data = {}
     Array.from(e.currentTarget.elements).forEach((field) => {
       if (field.name) {
-        data[field.name] = field.value;
+        data[field.name] = field.value
       }
-    });
+    })
 
-    const res = await fetch("api/email", {
-      method: "post",
+    const res = await fetch('api/email', {
+      method: 'post',
       body: JSON.stringify(data),
-    });
+    })
 
-    if (res.statusText == "OK") {
-      success();
-      setName("");
-      setEmail("");
-      setMessage("");
+    if (res.statusText == 'OK') {
+      success()
+      setName('')
+      setEmail('')
+      setMessage('')
     }
   }
   return (
     <div className="contact">
       <h2>{translationsObj.contactTitle}</h2>
       <h3>
-        adam.sokolski23@gmail.com{" "}
+        adam.sokolski23@gmail.com{' '}
         <a
           className="fancy-link"
-          href="https://www.linkedin.com/in/adam-sok%C3%B3lski-bb4370199/"
+          href="https://www.linkedin.com/in/adamsokolski/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -79,7 +79,7 @@ const Contact = ({ translationsObj }) => {
             name="name"
             value={name}
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e.target.value)
             }}
             required
           />
@@ -93,7 +93,7 @@ const Contact = ({ translationsObj }) => {
             required
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e.target.value)
             }}
           />
         </p>
@@ -106,7 +106,7 @@ const Contact = ({ translationsObj }) => {
             minLength={20}
             value={message}
             onChange={(e) => {
-              setMessage(e.target.value);
+              setMessage(e.target.value)
             }}
           ></textarea>
         </p>
@@ -118,7 +118,7 @@ const Contact = ({ translationsObj }) => {
         />
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
