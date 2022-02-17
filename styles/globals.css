@@ -399,6 +399,19 @@ textarea:focus {
   max-width: 600px;
 }
 
+.about-body .age {
+  display: inline-block;
+  width: 8ch;
+}
+
+.about-body .age-integer {
+}
+
+.about-body .age-decimal {
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
 /* Accessibility text for svg links */
 .visually-hidden {
   border: 0;
