@@ -1,14 +1,6 @@
 {
-  "name": "adam-sokolski",
-  "author": "Adam Sokólski",
-  "description": "Personal website for Adam Sokólski",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adamsokolski/adamsokolski.pl"
-  },
-  "url": "https://www.adamsokolski.pl/",
-  "version": "1.1.0",
-  "license": "MIT",
+  "name": "adamsokolski.pl",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,17 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.6.0",
-    "canvas-confetti": "^1.4.0",
-    "cookie-cutter": "^0.2.0",
-    "framer-motion": "^5.3.0",
-    "next": ">=12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9"
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.3"
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4"
   }
 }
