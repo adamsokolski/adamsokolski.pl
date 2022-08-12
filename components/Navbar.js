@@ -1,28 +1,18 @@
-import Flag from "./Flag";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import Flag from './Flag'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Navbar = ({ translationsObj, switchLang, langPolish }) => {
   return (
     <>
-      <Link href="/about">
-        <a className="fancy-link">
-          <span>01.</span> {translationsObj.aboutLink}
-        </a>
-      </Link>
-      {/* <Link href="/resume">
-        <a className="fancy-link">
-          <span>02.</span> {translationsObj.resumeLink}
-        </a>
-      </Link> */}
       <Link href="/projects">
         <a className="fancy-link">
-          <span>02.</span> {translationsObj.projectsLink}
+          <span>01.</span> {translationsObj.projectsLink}
         </a>
       </Link>
       <Link href="/contact">
         <a className="fancy-link">
-          <span>03.</span> {translationsObj.contactLink}
+          <span>02.</span> {translationsObj.contactLink}
         </a>
       </Link>
       <AnimatePresence exitBeforeEnter>
@@ -43,7 +33,7 @@ const Navbar = ({ translationsObj, switchLang, langPolish }) => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

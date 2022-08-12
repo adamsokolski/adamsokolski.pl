@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 
+import Projects from './projects'
+
 export default function Home({ translationsObj }) {
   const containerVariants = {
     initial: {
@@ -39,8 +41,8 @@ export default function Home({ translationsObj }) {
       <h3 className="prof">Front-End Developer</h3>
       <div className="index-buttons-box">
         <div className="mainButton">
-          <Link href="/about">
-            <a>{translationsObj.aboutButton}</a>
+          <Link href="/contact">
+            <a>{translationsObj.contactButton}</a>
           </Link>
         </div>
         <div className="mainButton projectsButton">
@@ -49,6 +51,8 @@ export default function Home({ translationsObj }) {
           </Link>
         </div>
       </div>
+
+      <Projects translationsObj={translationsObj} />
     </motion.div>
   )
 }

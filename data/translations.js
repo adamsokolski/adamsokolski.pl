@@ -21,6 +21,7 @@ const translations = {
     contactMessage: 'message',
     contactSubmit: 'Sumbit',
     aboutButton: 'About Me',
+    contactButton: 'Contact Me',
     privacyBody: [
       'This internet website uses its own technical cookies in order to help users navigate the site as efficiently and easily as possible.',
       'The website uses Google Analytics cookies to count the number of site visits. For information about the cookies used to visit the appropriate page of Google.',
@@ -53,6 +54,8 @@ const translations = {
     contactMessage: 'wiadomość',
     contactSubmit: 'Wyślij',
     aboutButton: 'O Mnie',
+    contactButton: 'Kontakt',
+
     privacyBody: [
       'Ta strona internetowa wykorzystuje własne techniczne pliki cookie, aby pomóc użytkownikom nawigować po witrynie tak wydajnie i łatwo, jak to możliwe.',
       'Strona korzysta z plików cookie Google Analytics do zliczania odwiedzin witryny. Aby uzyskać informacje o plikach cookie używanych do odwiedzenia odpowiedniej strony Google.',
